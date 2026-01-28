@@ -1,0 +1,20 @@
+[package]
+name = "potato-pfp-market"
+version = "0.1.0"
+description = "Potato PFP Prediction Market - Stake $POTATO on your favorite potato art"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "potato_pfp_market"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { version = "0.30.1", features = ["init-if-needed"] }
+anchor-spl = "0.30.1"
